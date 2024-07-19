@@ -48,7 +48,8 @@
         }
 
         .cart-image {
-            width: 20px;
+            width: 1.6rem;
+            fill: var(--clr-200);
         }
 
         .cart-arrow-down {
