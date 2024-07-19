@@ -43,4 +43,5 @@ HAM_ICON.addEventListener("click", () => {
 CROSS_ICON.addEventListener("click", () => {
     MOBILE_NAV_ITEM_LIST.style.animation = "swipeLeft 200ms ease-in forwards";
     MOBILE_NAV_OVERLAY.style.animation = "fadeOut 200ms ease-in forwards";
+    document.querySelector("body").style.overflow = "auto";
 })
