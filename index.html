@@ -7,6 +7,7 @@
     <title>Brands By Qubra!</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/overview.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
         rel="stylesheet">
     <script src="js/main.js" defer></script>
     <script src="js/nav.js" defer></script>
+    <script src="js/overview.js" defer></script>
 </head>
 
 <body>
@@ -230,8 +232,125 @@
             </div>
         </div>
     </nav>
+     <!-- Overview item window -->
+     <div class="wrap overview-window" data-overview-open = "false">
+         <section class="overview-item">
+            <button class="close-btn">
+                <svg class="cross-icon" version="1.1" id="cross-11" xmlns="http://www.w3.org/2000/svg" width="11px"
+                    height="11px" viewBox="0 0 11 11">
+                    <path
+                        d="M2.2,1.19l3.3,3.3L8.8,1.2C8.9314,1.0663,9.1127,0.9938,9.3,1C9.6761,1.0243,9.9757,1.3239,10,1.7&#xA;&#x9;c0.0018,0.1806-0.0705,0.3541-0.2,0.48L6.49,5.5L9.8,8.82C9.9295,8.9459,10.0018,9.1194,10,9.3C9.9757,9.6761,9.6761,9.9757,9.3,10&#xA;&#x9;c-0.1873,0.0062-0.3686-0.0663-0.5-0.2L5.5,6.51L2.21,9.8c-0.1314,0.1337-0.3127,0.2062-0.5,0.2C1.3265,9.98,1.02,9.6735,1,9.29&#xA;&#x9;C0.9982,9.1094,1.0705,8.9359,1.2,8.81L4.51,5.5L1.19,2.18C1.0641,2.0524,0.9955,1.8792,1,1.7C1.0243,1.3239,1.3239,1.0243,1.7,1&#xA;&#x9;C1.8858,0.9912,2.0669,1.06,2.2,1.19z" />
+                </svg>
+            </button>
+            <div class="item-image">
+                <div class="big-image">
+                    <div class="arrow left-arrow" onclick="">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
+                            enable-background="new 0 0 58.5 36.3" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M55.4,10.8L33.1,33c-1.8,2-5,2-6.9,0L4.1,10.8
+                                c-2.1-2-2.6-4.6-0.5-6.6l0.8-0.8c1.8-1.7,3.8-2.1,5.5-0.3c5.4,5.5,10.8,11,16.3,16.5c1.9,1.8,5,1.8,6.9,0c5.5-5.5,11-11,16.5-16.5
+                                c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" id="id_102">
+                            </path>
+                        </svg>
+                    </div>
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                    <div class="arrow right-arrow" onclick="">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
+                            enable-background="new 0 0 58.5 36.3" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M55.4,10.8L33.1,33c-1.8,2-5,2-6.9,0L4.1,10.8
+                                c-2.1-2-2.6-4.6-0.5-6.6l0.8-0.8c1.8-1.7,3.8-2.1,5.5-0.3c5.4,5.5,10.8,11,16.3,16.5c1.9,1.8,5,1.8,6.9,0c5.5-5.5,11-11,16.5-16.5
+                                c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" id="id_102">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="small-images">
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                </div>
+            </div>
+            <div class="item-info">
+                <h3 class="item-name">Beige Bag </h3>
+                <p class="item-price">Rs.<span class="price">9999.00 </span></p>
 
-    <!-- Landing Page -->
+                <div class="item-options">
+                    <p>Available Options</p>
+                    <label for="size">Size</label>
+                    <select name="size" id="size">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                    <label for="color">Color</label>
+                    <select name="color" id="color">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                    <div class="qty-and-cart">
+                        <div class="qty">
+                            <p>QTY</p>
+                            <button class="minus">--</button>
+                            <input type="number" name="qty" id="qty" max="20" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <button class="add-to-cart uppercase">Add to cart</button>
+                    </div>
+                </div>
+                <a class="uppercase buy-now" href="#">buy it now</a>
+            </div>
+             </section>
+     </div>
+    <!-- ######################## -->
+    <!-- Overview item window END -->
+    <!-- ######################## -->
+
+    <!-- Added to cart confirmation window -->
+
+    <div class="wrap addedtocart-window" data-addedtocart-open="false">
+        <section class="added-to-cart-confirmation-window">
+            <button class="close-btn">
+                <svg class="cross-icon" version="1.1" id="cross-11" xmlns="http://www.w3.org/2000/svg" width="11px"
+                    height="11px" viewBox="0 0 11 11">
+                    <path
+                        d="M2.2,1.19l3.3,3.3L8.8,1.2C8.9314,1.0663,9.1127,0.9938,9.3,1C9.6761,1.0243,9.9757,1.3239,10,1.7&#xA;&#x9;c0.0018,0.1806-0.0705,0.3541-0.2,0.48L6.49,5.5L9.8,8.82C9.9295,8.9459,10.0018,9.1194,10,9.3C9.9757,9.6761,9.6761,9.9757,9.3,10&#xA;&#x9;c-0.1873,0.0062-0.3686-0.0663-0.5-0.2L5.5,6.51L2.21,9.8c-0.1314,0.1337-0.3127,0.2062-0.5,0.2C1.3265,9.98,1.02,9.6735,1,9.29&#xA;&#x9;C0.9982,9.1094,1.0705,8.9359,1.2,8.81L4.51,5.5L1.19,2.18C1.0641,2.0524,0.9955,1.8792,1,1.7C1.0243,1.3239,1.3239,1.0243,1.7,1&#xA;&#x9;C1.8858,0.9912,2.0669,1.06,2.2,1.19z" />
+                </svg>
+            </button>
+
+            <div class="left-side">
+                <p class="added-to-cart-successfully">Added to cart successfully!</p>
+                <div class="product-image">
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                </div>
+                <p class="product-name">Beige Bag</p>
+                <p class="product-qty uppercase">quantity: <span>5</span></p>
+                <p class="product-total-price uppercase">Total price Rs.<span>999.00</span></p>
+            </div>
+            
+            <div class="right-side">
+                <div class="total-items-and-subtotal">
+                    <p class="total-items">There are <span>5</span> items in your cart</p>
+                    <p class="subtotal uppercase">subtotal: <span>Rs.1999.00</span></p>
+                </div>
+                <div class="btns">
+                    <button class="continue-shoping uppercase">Continue shopping</button>
+                    <a href="" class="view-shoping-bag uppercase">view shopping bag</a>
+                </div>
+                <a href="#" class="checkout uppercase">Checkout</a>
+            </div>
+        </section>
+    </div>
+        <!-- ##################################### -->
+        <!-- Added to cart confirmation window END -->
+        <!-- ##################################### -->
+
+    <!-- Home Page -->
     <div class="homepage" id="homepage">
         <section class="hero">
             <div class="item item-id-001" data-slider-item-show="true" data-slider-item-id="0">
@@ -2372,7 +2491,15 @@
 
             </div>
         </section>
+      
+
     </div>
+
+    <!-- ############# -->
+    <!-- Home Page END -->
+    <!-- ############# -->
+
+   
     <footer>
         <div class="container">
             <div class="social">
