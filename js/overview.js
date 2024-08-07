@@ -38,7 +38,6 @@ function qtyChange(symbol) {
         qtyInput.value = 1
         return
     };
-    console.log("sss")
 
     if (symbol === "plus") qtyInput.value = Number(currentValue) + 1;
     else qtyInput.value = Number(currentValue) - 1;

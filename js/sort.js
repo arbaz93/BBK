@@ -9,3 +9,4 @@ sortOptions.forEach(option => {
         console.log(option.getAttribute("data-value"))
     })
 })
+
