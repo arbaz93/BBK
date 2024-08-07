@@ -1,0 +1,123 @@
+.Items-with-categories {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    @media (max-width: 720px){
+        flex-direction: column;
+    }
+    .categories {
+        min-width: 15rem;
+        @media (max-width: 720px){
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            font-size: var(--fs-200);
+            font-weight: 500;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, .8);
+        }
+        .categorie-item {
+            border-bottom: 1px solid rgba(0, 0, 0, .8);
+            padding: 1rem .5rem;
+            a {
+                color: var(--clr-100);
+                font-size: var(--fs-100);
+                font-weight: 400;
+                text-decoration: none;
+            }
+        }
+        .categorie-item.with-subcategories {
+            width: 100%;
+            div:first-child {
+                display: flex;
+                justify-content: space-between !important;
+                
+                svg {
+                    width: .6rem !important;
+                }
+            }
+            .item-catagories {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                padding: 1rem .5rem;
+            }
+        }
+        a:hover {
+            color: var(--clr-300);
+        }   
+    }
+
+    .now-available {
+        .heading {
+            padding: 0;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .sort {
+                position: relative;
+                .h {
+                    display: flex;
+                    gap: 1rem;
+                    cursor: pointer;
+                    opacity: 0.4;
+                    p {
+                        font-size: var(--fs-100);
+                        font-weight: 500;
+                    }
+                    svg {
+                        width: .6rem;
+                    }
+                }
+                
+                .sort-options {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    display: none;
+                    flex-direction: column;
+                    gap: .2rem;
+                    border: 1px solid rgba(0, 0, 0, 1);
+                    min-width: max-content;
+                    background-color: #fff;
+                    opacity: 0;
+
+                    button {
+                        border: none;
+                        background: transparent;
+                        font-size: .9rem;
+                        font-weight: 500;
+                        opacity: .6;
+                        padding: .5rem;
+                        color: var(--clr-100);                       
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        opacity: .8;
+                        background-color: rgba(0, 0, 0, .8);
+                        color: #fff;
+                    }
+                }
+                
+            }
+            .sort:hover {
+                .h {
+                    opacity: .8;
+                }
+            }
+            .sort[data-collapse="false"] {
+                .sort-options {
+                    display: flex;
+                    animation: fadein 100ms linear forwards;
+                }
+
+            }
+        }
+    }
+
+}
