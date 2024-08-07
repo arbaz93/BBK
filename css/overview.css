@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100svw;
-    min-height: 100vh;
+    min-height: 100svh;
     background-color: rgba(0, 0, 0, .6);
     overflow-y: auto;
     z-index: 1;
