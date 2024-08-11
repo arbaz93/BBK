@@ -1,5 +1,4 @@
 .preloader {
-  display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,7 +6,7 @@
     min-height: 100svh;
     background-color: #fff;
     z-index: 10000;
-    /* display: flex; */
+    display: flex;
 
     .loader {
         position: absolute;
