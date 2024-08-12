@@ -1,13 +1,7 @@
-const OVERVIEW_BTN = document.querySelectorAll(".magni-glass");
-const OVERVIEW_CLOSE_BTN = document.querySelector(".overview-item > .close-btn");
 const ADD_TO_CART_BTN = document.querySelector(".add-to-cart ");
-const ADDED_TO_CART_CLOSE_BTN = document.querySelector(".added-to-cart-confirmation-window > .close-btn");
 const overviewWindow = document.querySelector("[data-overview-open]");
 const addedToCartWindow = document.querySelector("[data-addedtocart-open]");
 
-function displayOverviewWindow() {
-    overviewWindow.setAttribute("data-overview-open", true);
-}
 function displayCartConfirmationWindow() {
     addedToCartWindow.setAttribute("data-addedtocart-open", true);
 }
@@ -16,11 +10,6 @@ function closeWindow() {
     addedToCartWindow.setAttribute("data-addedtocart-open", false);
 }
 
-OVERVIEW_BTN.forEach(btn => {
-    btn.addEventListener("click", displayOverviewWindow)
-})
-OVERVIEW_CLOSE_BTN.addEventListener("click", closeWindow)
-ADDED_TO_CART_CLOSE_BTN.addEventListener("click", closeWindow)
 ADD_TO_CART_BTN.addEventListener("click", displayCartConfirmationWindow)
 
 // Increament decrement qty
