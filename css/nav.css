@@ -100,7 +100,8 @@
                     flex-direction: column;
                     justify-content: flex-start;
                     color: var(--clr-100);
-
+                    flex-grow: 2;
+                    
                     .product-name {
                         font-size: 0.8125rem;
                         color: gray;
