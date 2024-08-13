@@ -2,15 +2,12 @@ const ADD_TO_CART_BTN = document.querySelector(".add-to-cart ");
 const overviewWindow = document.querySelector("[data-overview-open]");
 const addedToCartWindow = document.querySelector("[data-addedtocart-open]");
 
-function displayCartConfirmationWindow() {
-    addedToCartWindow.setAttribute("data-addedtocart-open", true);
-}
+
 function closeWindow() {
     overviewWindow.setAttribute("data-overview-open", false);
     addedToCartWindow.setAttribute("data-addedtocart-open", false);
 }
 
-ADD_TO_CART_BTN.addEventListener("click", displayCartConfirmationWindow)
 
 // Increament decrement qty
 let qtyInput = document.querySelector(".qty > #qty");

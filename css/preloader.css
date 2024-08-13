@@ -7,7 +7,7 @@
     background-color: #fff;
     z-index: 10000;
     display: flex;
-    display: none;
+    /* display: none; */
 
     .loader {
         position: absolute;
