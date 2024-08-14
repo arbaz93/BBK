@@ -19,6 +19,7 @@
     <script src="js/preloader.js" defer></script>
     <script src="js/overview.js" defer ></script>
     <script src="js/test.js" type="module"></script>
+    <script src="js/routing.js" defer></script>
 </head>
 
 <body>
@@ -83,7 +84,7 @@
         <!-- Items -->
         <div class="nav-items">
             <div class="nav-item">
-                <a href="categories.html">New Arrivals</a>
+                <a href="categories.html" data-value="newarrivals">New Arrivals</a>
             </div>
 
             <div class="nav-item">
@@ -164,7 +165,7 @@
                 </button>
             </div>
             <div class="nav-item">
-                <a href="categories.html">New Arrivals</a>
+                <a href="categories.html" data-value="rings">New Arrivals</a>
             </div>
 
             <div class="nav-item">
@@ -265,7 +266,7 @@
             </button>
             <div class="item-image">
                 <div class="big-image">
-                    <div class="arrow left-arrow" onclick="">
+                    <div class="arrow left-arrow" onclick="changeImage('left')">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
                             enable-background="new 0 0 58.5 36.3" xml:space="preserve">
@@ -276,7 +277,7 @@
                         </svg>
                     </div>
                     <img src="assets/images/product images/article 1.jpg" alt="">
-                    <div class="arrow right-arrow" onclick="">
+                    <div class="arrow right-arrow" onclick="changeImage('right')">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
                             enable-background="new 0 0 58.5 36.3" xml:space="preserve">
@@ -288,10 +289,10 @@
                     </div>
                 </div>
                 <div class="small-images">
-                    <img src="assets/images/product images/article 1.jpg" alt="">
-                    <img src="assets/images/product images/article 1.jpg" alt="">
-                    <img src="assets/images/product images/article 1.jpg" alt="">
-                    <img src="assets/images/product images/article 1.jpg" alt="">
+                    <img src="assets/images/product images/article 1.jpg" class="active" alt="" data-i="0" onclick="changeImage('direct', this)">
+                    <img src="assets/images/product images/article 1.jpg" alt="" data-i="1" onclick="changeImage('direct', this)">
+                    <img src="assets/images/product images/article 1.jpg" alt="" data-i="2" onclick="changeImage('direct', this)">
+                    <img src="assets/images/product images/article 1.jpg" alt="" data-i="3" onclick="changeImage('direct', this)">
                 </div>
             </div>
             <div class="item-info">
@@ -386,7 +387,7 @@
                     <h1>Bags#1</h1>
                     <p>TGive your winters a new look and choose from our variety of winter menswear
                     </p>
-                    <button>Check out our products</button>
+                    <a href="categories.html" data-value="bags"><button>Check out our products</button></a>
                 </article>
                 <div class="right-arrow" onclick="imageItemSlider('right')">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -417,7 +418,7 @@
                     <h1>Bags#2</h1>
                     <p>TGive your winters a new look and choose from our variety of winter menswear
                     </p>
-                    <button>Check out our products</button>
+                    <a href="categories.html" data-value="lockets"><button>Check out our products</button></a>
                 </article>
                 <div class="right-arrow" onclick="imageItemSlider('right')">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -449,7 +450,7 @@
                     <h1>Bags#3</h1>
                     <p>TGive your winters a new look and choose from our variety of winter menswear
                     </p>
-                    <button>Check out our products</button>
+                    <a href="categories.html" data-value="rings"><button>Check out our products</button></a>
                 </article>
                 <div class="right-arrow" onclick="imageItemSlider('right')">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -480,7 +481,7 @@
                     <h1>Bags#4</h1>
                     <p>TGive your winters a new look and choose from our variety of winter menswear
                     </p>
-                    <button>Check out our products</button>
+                    <a href="categories.html" data-value="bracelets"><button>Check out our products</button></a>
                 </article>
                 <div class="right-arrow" onclick="imageItemSlider('right')">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -581,7 +582,7 @@
                     <p>Categories</p>
                 </div>
                 <div class="types">
-                    <a href="categories.html">New Arrivals</a>
+                    <a href="categories.html" data-value="newarrivals">New Arrivals</a>
                     <a href="categories.html" data-value="rings">Rings</a>
                     <a href="categories.html" data-value="bracelets">Bracelets</a>
                     <a href="categories.html" data-value="lockets">Lockets</a>

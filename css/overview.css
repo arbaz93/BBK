@@ -26,6 +26,9 @@
     width: 80%;
     padding: 2rem;
 
+    .active {
+        opacity: .5;
+    }
     /* Cross */
     .close-btn {
         position: absolute;
@@ -54,11 +57,15 @@
             position: relative;
             display: flex;
             justify-content: center;
-
+            overflow: hidden;
             img {
                 max-width: 100%;
+                transition: transform 100ms linear;
+                cursor: crosshair;
             }
-
+             img:hover {
+                transform: scale(2);
+            }
             .arrow {
                 position: absolute;
                 cursor: pointer;
@@ -83,7 +90,7 @@
                 z-index: 1;
             }
         }
-
+        
         .big-image:hover .arrow svg {
             opacity: .6;
         }

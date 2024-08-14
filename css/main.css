@@ -345,7 +345,11 @@ body {
         cursor: pointer;
     }
 }
-
+.now-available>.products-grid:not(.product) .empty {
+    width: 100%;
+    min-height: 100svh;
+    background-color: #114ec7;
+}
 /* ####################### */
 /* Footer                  */
 /* ####################### */

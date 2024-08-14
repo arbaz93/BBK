@@ -1,25 +1,24 @@
 import {fileData as data, overviewBtns } from './appendData.js'
 import { displayOverviewWindow, setItemToSessionStorage} from './fetchdata.js';
-let btnUpdated = false;
 const addCartBtn = document.querySelector(".overview-item .add-to-cart");
 
 
 document.querySelector("body").addEventListener("click", () => {
-    update()
+    update();
 })
-
+let x = setInterval(() => {
+    update();
+    console.log(overviewBtns)
+}, 100);
 function update() {
     if (overviewBtns != []) {
-        if (!btnUpdated) {
-            btnUpdated = true;
             overviewBtns.forEach(btn => {
                 btn.addEventListener("click", () => {
                     displayOverviewWindow(btn, data)
                 })
             })
+            clearInterval(x)
         }
-
-    }
 }
 function getAddItemData() {
     const itemClickedId =  addCartBtn.getAttribute("data-value");
@@ -55,7 +54,9 @@ function addToCart() {
     const cartItems = getSessionItems("cart");
     const cart = document.querySelector(".top-bar .cart-section > .cart-items > .items");
     let totalPrice = 0;
-    cartItems.map(item => {totalPrice += item.price * item['total qty']})
+    if (cartItems != undefined) {
+        cartItems.map(item => {totalPrice += item.price * item['total qty']})
+    }
     document.querySelector(".top-bar .shopping-options > .subtotal > .price").innerHTML = "Rs." + totalPrice;
     document.querySelector(".top-bar .cart-section .total-price-cart-icon").innerHTML = totalPrice;
     cart.innerHTML = "";

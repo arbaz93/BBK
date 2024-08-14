@@ -14,7 +14,7 @@ retrieveData().then((res, err) => {
 
 const appendData = (fileData) => {
     const productsGrid = document.querySelector(".now-available > .products-grid");
-
+    (fileData != [] || fileData != "") ? productsGrid.innerHTML = "": "";
     fileData.forEach((product, i) => {
         const template = `<article class="product" data-product-id="${product.id}">
                     <div class="product-img">
@@ -108,3 +108,24 @@ const appendData = (fileData) => {
     });
 }
 retrieveData();
+
+
+
+
+function sortItemsByType(data, type) {
+    if (data != [] && data != null && data != undefined) {
+        let d = data.filter(item => item["type"] == type);
+        appendData(d)
+        document.querySelector(".now-available > .heading > h2").innerHTML = type;
+        return d;
+    }
+}
+
+if(location.pathname == "/categories.html") {
+    let c = setInterval(() => {
+        if(fileData != []) clearInterval(c)
+            if (localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "lockets" || localStorage.getItem("route") == "rings" || localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "earings" || localStorage.getItem("route") == "bracelets")
+            sortItemsByType(fileData, localStorage.getItem("route"))
+            console.log("OAA")
+    }, 1000);
+}
