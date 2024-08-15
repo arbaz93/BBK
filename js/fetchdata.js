@@ -3,6 +3,7 @@ const retrieveData = async () => {
     const request = await fetch("json/prodData.json");
     const response = await request.json();
 
+    localStorage.setItem("total-items", response.length)
     return response;
 } 
 function displayOverviewWindow(item, data) {

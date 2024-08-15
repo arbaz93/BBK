@@ -3,6 +3,8 @@ export {fileData, overviewBtns}
 
 let fileData = [];
 let overviewBtns = [];
+const totalItems = localStorage.getItem("total-items")
+
 retrieveData().then((res, err) => {
     if (res) {
         fileData = res;
@@ -111,21 +113,50 @@ retrieveData();
 
 
 
-
+let sortedByTypeData;
 function sortItemsByType(data, type) {
     if (data != [] && data != null && data != undefined) {
         let d = data.filter(item => item["type"] == type);
         appendData(d)
+        sortedByTypeData = [...d]
         document.querySelector(".now-available > .heading > h2").innerHTML = type;
         return d;
     }
 }
+function sortItemsByPrice(data, option) {
+    let d;
 
+    if (data == null) {
+        if (option === 'htol') d = fileData.sort((a, b) => b.price - a.price);
+        if (option === 'ltoh') d = fileData.sort((a, b) => a.price - b.price);
+        appendData(d)
+    }
+    if (data != [] && data != null && data != undefined) {
+        if (option === 'htol') d = data.sort((a, b) => b.price - a.price);
+        if (option === 'ltoh') d = data.sort((a, b) => a.price - b.price);
+        
+
+        appendData(d)
+        return d;
+    }
+}
+
+document.querySelectorAll(".sort .sort-options button").forEach(btn => {
+    btn.addEventListener("click", () => {sortItemsByPrice(sortedByTypeData, btn.getAttribute("data-option"))})
+})
 if(location.pathname == "/categories.html") {
     let c = setInterval(() => {
         if(fileData != []) clearInterval(c)
             if (localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "lockets" || localStorage.getItem("route") == "rings" || localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "earings" || localStorage.getItem("route") == "bracelets")
             sortItemsByType(fileData, localStorage.getItem("route"))
-            console.log("OAA")
     }, 1000);
+}
+if(location.pathname == "/product.html") {
+    let c = setInterval(() => {
+        if(fileData != [] && fileData.length == totalItems) {
+            const product = fileData.filter(item => item.id == localStorage.getItem("product-id"))
+            console.log(product)
+            clearInterval(c)
+        }
+        }, 1000);
 }

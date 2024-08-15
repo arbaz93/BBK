@@ -1,27 +1,25 @@
-import {fileData as data, overviewBtns } from './appendData.js'
-import { displayOverviewWindow, setItemToSessionStorage} from './fetchdata.js';
+import { fileData as data, overviewBtns } from './appendData.js'
+import { displayOverviewWindow, setItemToSessionStorage } from './fetchdata.js';
 const addCartBtn = document.querySelector(".overview-item .add-to-cart");
+const totalItems = localStorage.getItem("total-items")
 
-
-document.querySelector("body").addEventListener("click", () => {
-    update();
-})
 let x = setInterval(() => {
     update();
-    console.log(overviewBtns)
 }, 100);
+
 function update() {
+    2
     if (overviewBtns != []) {
-            overviewBtns.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    displayOverviewWindow(btn, data)
-                })
+        overviewBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                displayOverviewWindow(btn, data)
             })
-            clearInterval(x)
-        }
+        })
+            if (overviewBtns.length == totalItems) clearInterval(x)
+    }
 }
 function getAddItemData() {
-    const itemClickedId =  addCartBtn.getAttribute("data-value");
+    const itemClickedId = addCartBtn.getAttribute("data-value");
     let itemClickedData = data.filter(d => d.id == itemClickedId)[0];
     setItemToSessionStorage("cart", itemClickedData)
 
@@ -55,15 +53,15 @@ function addToCart() {
     const cart = document.querySelector(".top-bar .cart-section > .cart-items > .items");
     let totalPrice = 0;
     if (cartItems != undefined) {
-        cartItems.map(item => {totalPrice += item.price * item['total qty']})
+        cartItems.map(item => { totalPrice += item.price * item['total qty'] })
     }
     document.querySelector(".top-bar .shopping-options > .subtotal > .price").innerHTML = "Rs." + totalPrice;
     document.querySelector(".top-bar .cart-section .total-price-cart-icon").innerHTML = totalPrice;
     cart.innerHTML = "";
     // Add events to delete btn
     // ##########################
-    
-    if(cartItems != undefined) {
+
+    if (cartItems != undefined) {
         cartItems.map((item, i) => {
             const temp = `<div class="cart-item">
                                 <div class="product-image">
@@ -86,7 +84,7 @@ function addToCart() {
         })
         let deleteItemFromCartBtn = document.querySelectorAll(".top-bar .cart-section > .cart-items > .items > .cart-item > .delete-btn");
         deleteItemFromCartBtn.forEach(btn => {
-            btn.addEventListener("click", (e) => {deleteItemfromSession("cart", e)})
+            btn.addEventListener("click", (e) => { deleteItemfromSession("cart", e) })
         })
         document.querySelector(".top-bar .cart-section > .total-items-in-cart").innerHTML = cartItems.length;
     }
@@ -98,9 +96,11 @@ function getSessionItems(location) {
     return JSON.parse(sessionStorage.getItem(location))
 }
 
+if (location.pathname != "/product.html"){
 addCartBtn.addEventListener("click", () => {
     getAddItemData();
 })
+}
 
 function deleteItemfromSession(location, itemId) {
     let data = JSON.parse(sessionStorage.getItem(location));
@@ -109,4 +109,27 @@ function deleteItemfromSession(location, itemId) {
     let arr = JSON.stringify(data.filter((item, i) => i != id))
     sessionStorage.setItem(location, arr);
     addToCart();
+}
+
+
+// Redirect to product page when clicked on cart icon below product
+let productPageLinkBtn;
+let interval = setInterval(() => {
+    productPageLinkBtn = document.querySelectorAll(".product .cart");
+    if (productPageLinkBtn != [] && productPageLinkBtn != null && productPageLinkBtn.length == totalItems) {
+        productPageLinkBtn.forEach(btn => {
+            btn.addEventListener("click", () => { 
+                productLinkClicked(btn);
+                productPageRedirect();
+             })
+        })
+            clearInterval(interval)
+    }
+}, 200);
+const productLinkClicked = (item) => {
+    const id = item.getAttribute("data-product-id");
+    localStorage.setItem("product-id", id)
+}
+const productPageRedirect = () => {
+    window.location.href = "product.html";
 }

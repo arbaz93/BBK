@@ -7,7 +7,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "bags",
-        "price": 4000,
+        "price": 660,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -20,7 +20,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "bags",
-        "price": 4000,
+        "price": 400,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -33,7 +33,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "bags",
-        "price": 4000,
+        "price": 42000,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -46,7 +46,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "rings",
-        "price": 4000,
+        "price": 320,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -59,7 +59,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "bags",
-        "price": 4000,
+        "price": 440,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -72,7 +72,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "bags",
-        "price": 4000,
+        "price": 8900,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -85,7 +85,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "bags",
-        "price": 4000,
+        "price": 900,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -98,7 +98,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "rings",
-        "price": 4000,
+        "price": 999,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -124,7 +124,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "rings",
-        "price": 4000,
+        "price": 110,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -137,7 +137,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "rings",
-        "price": 4000,
+        "price": 300,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -150,7 +150,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "rings",
-        "price": 4000,
+        "price": 1200,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -163,7 +163,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "lockets",
-        "price": 4000,
+        "price": 1000,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -176,7 +176,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "lockets",
-        "price": 4000,
+        "price": 4200,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -189,7 +189,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "lockets",
-        "price": 4000,
+        "price": 600,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"
@@ -202,7 +202,7 @@
         "sizes": ["small", "medium", "large"],
         "colors": ["red", "green", "blue"],
         "type": "lockets",
-        "price": 4000,
+        "price": 7000,
         "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
         "total qty": 10,
         "status": "new"

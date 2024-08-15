@@ -18,4 +18,5 @@ const lastLinkClicked = (item) => {
 }
 
 
+
 if(window.performance.navigation && window.performance.navigation.type === 1) localStorage.setItem("route", "")

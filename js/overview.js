@@ -55,6 +55,8 @@ const changeImage = (btn, elem) => {
     small_images.forEach(img => {img.classList.remove("active")})
     currentImage.classList.add("active");    
 }
+
+// Scale overview main image on mouse move
 const scaleImage = (e) => {
     let x = e.offsetX;
     let y = e.offsetY;
