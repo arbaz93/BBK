@@ -50,16 +50,33 @@ function setItemToSessionStorage(location, data) {
             arr.push(e)
         });
     }
-    let newD = {
-        "id": data.id,
-        "name": data.name,
-        "main image": data["main image"],
-        "size": document.querySelector(".overview-item > .item-info #size").value,
-        "color": document.querySelector(".overview-item > .item-info #color").value,
-        "type": data.type,
-        "price": data.price,
-        "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
-    };
-    arr.push(newD)
+    console.log(document.querySelector(".product-page > .product > .item-info > .item-options > #size"))
+    let newD;
+    if (location.pathname == "/product.html") {
+
+        newD = {
+            "id": data.id,
+            "name": data.name,
+            "main image": data["main image"],
+            "size": document.querySelector(".product-page > .product > .item-info > .item-options > #size").value,
+            "color": document.querySelector(".product-page > .product > .item-info > .item-options > #color").value,
+            "type": data.type,
+            "price": data.price,
+            "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
+        };
+    } 
+    // else {
+    //     newD = {
+    //         "id": data.id,
+    //         "name": data.name,
+    //         "main image": data["main image"],
+    //         "size": document.querySelector(".overview-item > .item-info #size").value ,
+    //         "color": document.querySelector(".overview-item > .item-info #color").value,
+    //         "type": data.type,
+    //         "price": data.price,
+    //         "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
+    //     };
+    // }
+        arr.push(newD)
     sessionStorage.setItem(location, JSON.stringify(arr))
 }

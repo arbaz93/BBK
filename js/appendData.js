@@ -155,8 +155,38 @@ if(location.pathname == "/product.html") {
     let c = setInterval(() => {
         if(fileData != [] && fileData.length == totalItems) {
             const product = fileData.filter(item => item.id == localStorage.getItem("product-id"))
-            console.log(product)
+            insertProductInformationInProductPage(product);
             clearInterval(c)
         }
         }, 1000);
 }
+function insertProductInformationInProductPage(data) {
+    const item = data[0];
+    const mainImage = document.querySelector(".product-page > .product > .item-image > .big-image > img");
+    const smallImages = document.querySelectorAll(".product-page > .product > .item-image > .small-images > img");
+    const name = document.querySelector(".product-page > .product > .item-info > .item-name");
+    const price = document.querySelector(".product-page > .product > .item-info > .item-price > .price");
+    const size = document.querySelector(".product-page > .product > .item-info > .item-options > #size");
+    const color = document.querySelector(".product-page > .product > .item-info > .item-options > #color");
+    document.querySelector(".product-page > .product #qty").max = item["total qty"];
+    const addToCartBtn = document.querySelector(".product-page > .product > .item-info > .item-options .add-to-cart");
+    const buyNowBtn = document.querySelector(".product-page > .product > .item-info > .buy-now");
+    const description = document.querySelector(".product-page > .product > .item-info > .item-description > .description");
+
+    mainImage.src = item["main image"];
+    smallImages.forEach((img, i) => {
+        img.src = item["sub images"][i]
+    });
+    name.innerHTML = item.name;
+    price.innerHTML = item.price;
+    item["sizes"].forEach(s => {
+        size.innerHTML += `<option value="${s}">${s}</option>`;
+    });
+    item["colors"].forEach(c => {
+        color.innerHTML += `<option value="${c}">${c}</option>`;
+    });
+    addToCartBtn.setAttribute("data-value", item.id);
+    buyNowBtn.setAttribute("data-value", item.id);
+
+    description.innerHTML = item["description"]
+}   
