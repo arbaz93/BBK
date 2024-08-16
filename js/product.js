@@ -1,5 +1,4 @@
 // Image slider
-
 const main_image = document.querySelector(".product-page > .product > .item-image > .big-image > img");
 const small_images = document.querySelectorAll(".product-page > .product > .item-image > .small-images > img");
 let currentIndex = 0;

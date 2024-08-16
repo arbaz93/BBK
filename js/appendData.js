@@ -3,12 +3,12 @@ export {fileData, overviewBtns}
 
 let fileData = [];
 let overviewBtns = [];
-const totalItems = localStorage.getItem("total-items")
+let totalItems = localStorage.getItem("total-items")
 
 retrieveData().then((res, err) => {
     if (res) {
         fileData = res;
-        appendData(fileData)
+        if(localStorage.getItem("route") == undefined || localStorage.getItem("route") == "" || localStorage.getItem("route") == null) appendData(fileData)
     } else {
         console.error(err)
     }
@@ -120,6 +120,10 @@ function sortItemsByType(data, type) {
         appendData(d)
         sortedByTypeData = [...d]
         document.querySelector(".now-available > .heading > h2").innerHTML = type;
+
+        
+        
+        
         return d;
     }
 }
@@ -153,12 +157,14 @@ if(location.pathname == "/categories.html") {
 }
 if(location.pathname == "/product.html") {
     let c = setInterval(() => {
-        if(fileData != [] && fileData.length == totalItems) {
+        if(fileData != [] && fileData.length > 1) {
             const product = fileData.filter(item => item.id == localStorage.getItem("product-id"))
             insertProductInformationInProductPage(product);
-            clearInterval(c)
+            const locataionType = document.querySelector(".page-location .type").innerHTML = product[0].type;
+            const locataionName = document.querySelector(".page-location .name").innerHTML = product[0].name;
+            if (document.querySelector(".state").getAttribute("data-state")) clearInterval(c)
         }
-        }, 1000);
+        }, 100);
 }
 function insertProductInformationInProductPage(data) {
     const item = data[0];
@@ -189,4 +195,6 @@ function insertProductInformationInProductPage(data) {
     buyNowBtn.setAttribute("data-value", item.id);
 
     description.innerHTML = item["description"]
+    document.querySelector(".state").setAttribute("data-state", "defined")
+
 }   

@@ -16,9 +16,10 @@ function displayOverviewWindow(item, data) {
     const colors = document.querySelector(".overview-item > .item-info #color");
     const qty = document.querySelector(".overview-item > .item-info .qty > #qty");
     const addCartBtn = document.querySelector(".overview-item .add-to-cart");
-    
+    const buyNowBtn =  document.querySelector(".overview-item .buy-now");
     
     let selectedElem = data.filter(i => i.id == itemId)[0];
+    buyNowBtn.setAttribute("data-value", selectedElem.id)
     mainImage.src = selectedElem["main image"];
     subImages.forEach((image, i) => {
         image.src = selectedElem['sub images'][i]
@@ -50,10 +51,21 @@ function setItemToSessionStorage(location, data) {
             arr.push(e)
         });
     }
-    console.log(document.querySelector(".product-page > .product > .item-info > .item-options > #size"))
+    const productPage = document.querySelector(".product-page");
     let newD;
-    if (location.pathname == "/product.html") {
 
+    if (productPage == null || productPage == undefined) {
+        newD = {
+            "id": data.id,
+            "name": data.name,
+            "main image": data["main image"],
+            "size": document.querySelector(".overview-item > .item-info #size").value ,
+            "color": document.querySelector(".overview-item > .item-info #color").value,
+            "type": data.type,
+            "price": data.price,
+            "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
+        };
+    } else {
         newD = {
             "id": data.id,
             "name": data.name,
@@ -62,21 +74,9 @@ function setItemToSessionStorage(location, data) {
             "color": document.querySelector(".product-page > .product > .item-info > .item-options > #color").value,
             "type": data.type,
             "price": data.price,
-            "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
+            "total qty": document.querySelector(".product-page > .product .item-info input#qty").value,
         };
     } 
-    // else {
-    //     newD = {
-    //         "id": data.id,
-    //         "name": data.name,
-    //         "main image": data["main image"],
-    //         "size": document.querySelector(".overview-item > .item-info #size").value ,
-    //         "color": document.querySelector(".overview-item > .item-info #color").value,
-    //         "type": data.type,
-    //         "price": data.price,
-    //         "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
-    //     };
-    // }
         arr.push(newD)
     sessionStorage.setItem(location, JSON.stringify(arr))
 }

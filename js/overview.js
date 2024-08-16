@@ -64,3 +64,4 @@ const scaleImage = (e) => {
 }
 main_image.addEventListener("mousemove", scaleImage)
 main_image.addEventListener("touchmove", scaleImage)
+
