@@ -16,7 +16,8 @@ retrieveData().then((res, err) => {
 
 const appendData = (fileData) => {
     const productsGrid = document.querySelector(".now-available > .products-grid");
-    (fileData != [] || fileData != "") ? productsGrid.innerHTML = "": "";
+    
+    (fileData != [] || fileData != "" && document.querySelector(".product-page") == undefined) ? productsGrid.innerHTML = "": "";
     fileData.forEach((product, i) => {
         const template = `<article class="product" data-product-id="${product.id}">
                     <div class="product-img">

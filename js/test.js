@@ -92,6 +92,7 @@ function addToCart() {
             btn.addEventListener("click", (e) => { deleteItemfromSession("cart", e) })
         })
         document.querySelector(".top-bar .cart-section > .total-items-in-cart").innerHTML = cartItems.length;
+        document.querySelector(".navigation .total-items-in-cart").innerHTML = cartItems.length;
     }
 
 }
@@ -99,7 +100,7 @@ addToCart()
 function getSessionItems(location) {
     return JSON.parse(sessionStorage.getItem(location))
 }
-if (location.pathname != "/product.html") {
+if (document.querySelector(".product-page") == undefined) {
     addCartBtn.addEventListener("click", () => {
         getAddItemData();
     })
