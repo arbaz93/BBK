@@ -16,8 +16,10 @@ retrieveData().then((res, err) => {
 
 const appendData = (fileData) => {
     const productsGrid = document.querySelector(".now-available > .products-grid");
+    if (fileData != [] || fileData != "") {
+        if(document.querySelector(".product-page") == undefined) productsGrid.innerHTML = "";
+    } 
     
-    (fileData != [] || fileData != "" && document.querySelector(".product-page") == undefined) ? productsGrid.innerHTML = "": "";
     fileData.forEach((product, i) => {
         const template = `<article class="product" data-product-id="${product.id}">
                     <div class="product-img">
@@ -106,7 +108,10 @@ const appendData = (fileData) => {
                         </div>
                     </div>
                 </article>`;
-        productsGrid.innerHTML += template;
+                if (document.querySelector(".product-page") == undefined) {
+
+                    productsGrid.innerHTML += template;
+                }
         overviewBtns = document.querySelectorAll(".product .magni-glass");
     });
 }
