@@ -1,8 +1,7 @@
 import { retrieveData } from "./fetchdata.js";
-export {fileData, overviewBtns}
+export {fileData}
 
 let fileData = [];
-let overviewBtns = [];
 let totalItems = localStorage.getItem("total-items")
 
 retrieveData().then((res, err) => {
@@ -33,12 +32,12 @@ const appendData = (fileData) => {
                         <div class="product-view">
                             <div class="cart" title="Add to cart" data-product-id="${product.id}">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
-                                <!DOCTYPE svg
+                                <!DOCTYPE svg 
                                     PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                     viewBox="0 0 475.084 475.085" style="enable-background:new 0 0 475.084 475.085;"
-                                    xml:space="preserve">
+                                    xml:space="preserve" data-product-id="${product.id}">
                                     <g>
                                         <g>
                                             <path d="M365.446,401.998c0,10.092,3.579,18.702,10.711,25.834c7.132,7.139,15.749,10.711,25.845,10.711
@@ -95,7 +94,7 @@ const appendData = (fileData) => {
                             </div>
                             <div class="magni-glass" title="Overview" data-product-id="${product.id}">
                                 <?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" data-product-id="${product.id}">
                                     <g id="Layer_2" data-name="Layer 2">
                                         <g id="Layer_1-2" data-name="Layer 1">
                                             <path class="cls-1"
@@ -112,7 +111,6 @@ const appendData = (fileData) => {
 
                     productsGrid.innerHTML += template;
                 }
-        overviewBtns = document.querySelectorAll(".product .magni-glass");
     });
 }
 retrieveData();
@@ -160,6 +158,8 @@ if(location.pathname == "/categories.html") {
             if (localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "lockets" || localStorage.getItem("route") == "rings" || localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "earings" || localStorage.getItem("route") == "bracelets")
             sortItemsByType(fileData, localStorage.getItem("route"))
     }, 1000);
+} else {
+    appendData(fileData)
 }
 if(location.pathname == "/product.html") {
     let c = setInterval(() => {
@@ -203,4 +203,5 @@ function insertProductInformationInProductPage(data) {
     description.innerHTML = item["description"]
     document.querySelector(".state").setAttribute("data-state", "defined")
 
-}   
+}
+

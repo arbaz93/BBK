@@ -1,28 +1,18 @@
-import { fileData as data, overviewBtns } from './appendData.js'
+import { fileData as data} from './appendData.js'
 import { displayOverviewWindow, setItemToSessionStorage } from './fetchdata.js';
 const addCartBtn = document.querySelector(".overview-item .add-to-cart");
-let totalItems = localStorage.getItem("total-items")
 
-let x = setInterval(() => {
-    update();
-}, 100);
-
-function update() {
-    if (location.pathname == "/product.html") clearInterval(x)
-
-    if (overviewBtns != []) {
-        overviewBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                displayOverviewWindow(btn, data)
-            })
-        })
-        localStorage.setItem("total-items", overviewBtns.length);
-
-        let totalNumBtns = overviewBtns.length;
-        let totalI = localStorage.getItem("total-items")
-        if (totalNumBtns == totalI && totalNumBtns > 0) clearInterval(x)
-    }
+// Function to set event globally
+function addGlobalEventListener(type, selector, callback, parent = document) {
+    parent.addEventListener(type, e => {
+        console.log(selector)
+        if(e.target.matches(selector)) {
+            callback(e)
+        }
+    })
 }
+
+
 function getAddItemData() {
     const itemClickedId = addCartBtn.getAttribute("data-value");
     let itemClickedData = data.filter(d => d.id == itemClickedId)[0];
@@ -100,12 +90,8 @@ addToCart()
 function getSessionItems(location) {
     return JSON.parse(sessionStorage.getItem(location))
 }
-if (document.querySelector(".product-page") == undefined) {
-    addCartBtn.addEventListener("click", () => {
-        getAddItemData();
-    })
 
-}
+
 function deleteItemfromSession(location, itemId) {
     let data = JSON.parse(sessionStorage.getItem(location));
     let id = itemId.srcElement.getAttribute("data-index");
@@ -116,25 +102,7 @@ function deleteItemfromSession(location, itemId) {
 }
 
 
-// Redirect to product page when clicked on cart icon below product
-let productPageLinkBtn;
-let interval = setInterval(() => {
-    if (location.pathname == "/product.html") clearInterval(interval)
-    productPageLinkBtn = document.querySelectorAll(".product .cart");
-    localStorage.setItem("total-items", productPageLinkBtn.length);
 
-    let totalNumBtns = productPageLinkBtn.length;
-    let totalI = localStorage.getItem("total-items")
-    if (productPageLinkBtn != [] && productPageLinkBtn != null && totalNumBtns == totalI && totalNumBtns > 0) {
-        productPageLinkBtn.forEach(btn => {
-            btn.addEventListener("click", () => {
-                productLinkClicked(btn);
-                productPageRedirect();
-            })
-        })
-        clearInterval(interval)
-    }
-}, 200);
 const productLinkClicked = (item) => {
     const id = item.getAttribute("data-product-id");
     localStorage.setItem("product-id", id)
@@ -143,12 +111,26 @@ const productPageRedirect = () => {
     window.location.href = "product.html";
 }
 
+// Addtocart event btn 
+addGlobalEventListener("click", ".overview-item .add-to-cart", e => {getAddItemData()}, document.querySelector(".overview-item"))
+// Redirect to product page when clicked on cart icon below product
+addGlobalEventListener("click", ".product .cart", e => {
+    productLinkClicked(e.target);
+    productPageRedirect()
+}, document.querySelector(".products-grid"))
+addGlobalEventListener("click", ".product .cart svg", e => {
+    productLinkClicked(e.target);
+    productPageRedirect()
+}, document.querySelector(".products-grid"))
+// Setting events on overview button
+addGlobalEventListener("click", ".magni-glass", e => {displayOverviewWindow(e.target, data)}, document.querySelector(".products-grid"))
+addGlobalEventListener("click", ".magni-glass > svg", e => {displayOverviewWindow(e.target, data)}, document.querySelector(".products-grid"))
+
 
 // Function to add items to cart in product.html page
 const addToCartBtnInProductPage = document.querySelector(".product-page > .product > .item-info .add-to-cart");
 const buyNowBtnInProductPage = document.querySelector(".product-page > .product > .item-info .buy-now");
 const buyNowBtnInOverview = document.querySelector(".overview-item .buy-now");
-console.log(buyNowBtnInOverview)
 function getAddItemDataInProductPage(btn) {
     const itemClickedId = btn.getAttribute("data-value");
     let itemClickedData = data.filter(d => d.id == itemClickedId)[0];
