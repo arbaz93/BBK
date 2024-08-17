@@ -37,7 +37,7 @@ main_image.addEventListener("touchmove", scaleImage)
     const plus = document.querySelector(".product-page > .product .item-info .qty .plus");
     const changeQty = (symbol) => {
         const max = Number(qtyInput.max);
-        if(symbol === "plus" && qtyInput.value < 10) {
+        if(symbol === "plus" && qtyInput.value < max) {
             qtyInput.value++;
         }
         if(symbol === "minus" && qtyInput.value > 1) {

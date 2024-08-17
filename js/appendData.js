@@ -172,7 +172,6 @@ if(location.pathname == "/product.html") {
 }
 function insertProductInformationInProductPage(data) {
     const item = data[0];
-    description.innerHTML = '1 :' + JSON.stringify(item);
 
     const mainImage = document.querySelector(".product-page > .product > .item-image > .big-image > img");
     const smallImages = document.querySelectorAll(".product-page > .product > .item-image > .small-images > img");
@@ -184,6 +183,7 @@ function insertProductInformationInProductPage(data) {
     const addToCartBtn = document.querySelector(".product-page > .product > .item-info > .item-options .add-to-cart");
     const buyNowBtn = document.querySelector(".product-page > .product > .item-info > .buy-now");
     const description = document.querySelector(".product-page > .product > .item-info > .item-description > .description");
+    description.innerHTML = '1 :' + JSON.stringify(item);
 
     mainImage.src = item["main image"];
     smallImages.forEach((img, i) => {

@@ -13,24 +13,20 @@ function closeWindow() {
 let qtyInput = document.querySelector(".qty > #qty");
 let plusBtn = document.querySelector(".qty > .plus");
 let minusBtn = document.querySelector(".qty > .minus")
-function qtyChange(symbol) {
-    let currentValue = qtyInput.value;
 
-    if (Number(currentValue) > 20) {
-        qtyInput.value = 20
-        return
-    };
-    if (Number(currentValue) <= 0) {
-        qtyInput.value = 1
-        return
-    };
-
-    if (symbol === "plus") qtyInput.value = Number(currentValue) + 1;
-    else qtyInput.value = Number(currentValue) - 1;
+const changeQty = (symbol) => {
+    const max = Number(qtyInput.max);
+    if(symbol === "plus" && qtyInput.value < max) {
+        qtyInput.value++;
+    }
+    if(symbol === "minus" && qtyInput.value > 1) {
+        qtyInput.value--;
+    }
 
 }
-plusBtn.addEventListener("click", () =>{qtyChange("plus")})
-minusBtn.addEventListener("click", () => qtyChange("minus"))
+
+plusBtn.addEventListener("click", () =>{changeQty("plus")})
+minusBtn.addEventListener("click", () => changeQty("minus"))
 
 // Image slider
 const main_image = document.querySelector(".overview-item .big-image img");
