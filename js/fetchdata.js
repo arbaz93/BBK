@@ -43,6 +43,11 @@ function displayOverviewWindow(item, data) {
 
     
 }
+const categoriesPage = document.querySelector("#categories_page");
+const homePage = document.querySelector("#homepage");
+const productPage = document.querySelector("#product_page");
+const shoppingBagPage = document.querySelector("#product_page");
+
 function setItemToSessionStorage(location, data) {
     let arr = [];
     if (sessionStorage.getItem(location) != undefined) {
@@ -54,7 +59,7 @@ function setItemToSessionStorage(location, data) {
     const productPage = document.querySelector(".product-page");
     let newD;
 
-    if (productPage == null || productPage == undefined) {
+    if (categoriesPage != undefined || homePage != undefined) {
         newD = {
             "id": data.id,
             "name": data.name,
@@ -65,7 +70,20 @@ function setItemToSessionStorage(location, data) {
             "price": data.price,
             "total qty": document.querySelector(".overview-item > .item-info input#qty").value,
         };
-    } else {
+    } 
+    if(productPage != undefined) {
+        newD = {
+            "id": data.id,
+            "name": data.name,
+            "main image": data["main image"],
+            "size": document.querySelector(".product-page > .product > .item-info > .item-options > #size").value,
+            "color": document.querySelector(".product-page > .product > .item-info > .item-options > #color").value,
+            "type": data.type,
+            "price": data.price,
+            "total qty": document.querySelector(".product-page > .product .item-info input#qty").value,
+        };
+    } 
+    if(shoppingBagPage != undefined) {
         newD = {
             "id": data.id,
             "name": data.name,

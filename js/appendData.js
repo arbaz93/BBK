@@ -1,18 +1,22 @@
-import { retrieveData } from "./fetchdata.js";
+import { retrieveData, setItemToSessionStorage } from "./fetchdata.js";
 export {fileData}
 
 let fileData = [];
-let totalItems = localStorage.getItem("total-items")
-
-retrieveData().then((res, err) => {
+const categoriesPage = document.querySelector("#categories_page");
+const homePage = document.querySelector("#homepage");
+const productPage = document.querySelector("#product_page");
+const shoppingBagPage = document.querySelector("#product_page");
+// This is the function that fetch data from the main product data json file
+retrieveData().then((res, err) => { 
     if (res) {
         fileData = res;
-        if(localStorage.getItem("route") == undefined || localStorage.getItem("route") == "" || localStorage.getItem("route") == null) appendData(fileData)
+        if(localStorage.getItem("route") == undefined || localStorage.getItem("route") == "" || localStorage.getItem("route") == null && categoriesPage != undefined) appendData(fileData)
     } else {
         console.error(err)
     }
 })
 
+// This function will append html containing product data into the page
 const appendData = (fileData) => {
     const productsGrid = document.querySelector(".now-available > .products-grid");
     if (fileData != [] || fileData != "") {
@@ -110,10 +114,10 @@ const appendData = (fileData) => {
                 }
     });
 }
-retrieveData();
+if (homePage != undefined || categoriesPage != undefined) retrieveData();
 
 
-
+// these functions will sort data according to the options that the user clicks on
 let sortedByTypeData;
 function sortItemsByType(data, type) {
     if (data != [] && data != null && data != undefined) {
@@ -149,17 +153,23 @@ function sortItemsByPrice(data, option) {
 document.querySelectorAll(".sort .sort-options button").forEach(btn => {
     btn.addEventListener("click", () => {sortItemsByPrice(sortedByTypeData, btn.getAttribute("data-option"))})
 })
-if(document.querySelector("#categories_page") != undefined) {
+
+// This statement will check what is the that the user clicked on and filter data accordingly and append it onto the page
+if(categoriesPage != undefined) {
     let c = setInterval(() => {
         if(fileData != []) clearInterval(c)
             if (localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "lockets" || localStorage.getItem("route") == "rings" || localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "earings" || localStorage.getItem("route") == "bracelets")
             sortItemsByType(fileData, localStorage.getItem("route"))
     }, 1000);
-} else {
+}
+if (homePage != undefined) {
     appendData(fileData)
 }
-console.log("updated v1.0")
-if(document.querySelector("#product_page") != undefined) {
+// I will run iteratively as long as we do not get data in fileData(which is the file containing all data about products)
+// After fetching data it will send data to insertProductInformationInProductPage(product)
+// It will also set page location
+// After everything runs it will clearInterval
+if(productPage != undefined) {
     let c = setInterval(() => {
         if(fileData != [] && fileData.length > 1) {
             const product = fileData.filter(item => item.id == localStorage.getItem("product-id"))
@@ -170,6 +180,8 @@ if(document.querySelector("#product_page") != undefined) {
         }
         }, 100);
 }
+
+// This function will innerHTML product data in product.html page
 function insertProductInformationInProductPage(data) {
     const item = data[0];
 
@@ -183,7 +195,6 @@ function insertProductInformationInProductPage(data) {
     const addToCartBtn = document.querySelector(".product-page > .product > .item-info > .item-options .add-to-cart");
     const buyNowBtn = document.querySelector(".product-page > .product > .item-info > .buy-now");
     const description = document.querySelector(".product-page > .product > .item-info > .item-description > .description");
-    description.innerHTML = '1 :' + JSON.stringify(item);
 
     mainImage.src = item["main image"];
     smallImages.forEach((img, i) => {
@@ -201,8 +212,6 @@ function insertProductInformationInProductPage(data) {
     buyNowBtn.setAttribute("data-value", item.id);
 
     description.innerHTML = item["description"]
-    description.innerHTML = JSON.stringify(item);
     document.querySelector(".state").setAttribute("data-state", "defined")
 
 }
-

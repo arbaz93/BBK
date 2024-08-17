@@ -1,6 +1,6 @@
 // 
-const HERO_SECTION_ARTICLE = document.querySelectorAll("#homepage > .hero > .item > article");
-const HERO_SECTION_IMG = document.querySelectorAll("#homepage > .hero > .item > .img-body > img");
+const HERO_SECTION_ARTICLE = document.querySelectorAll(".homepage > .hero > .item > article");
+const HERO_SECTION_IMG = document.querySelectorAll(".homepage > .hero > .item > .img-body > img");
 
 function setArticleHeight() {
     HERO_SECTION_ARTICLE.forEach((article, i) => {
