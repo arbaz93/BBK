@@ -158,15 +158,14 @@ if(document.querySelector("#categories_page") != undefined) {
 } else {
     appendData(fileData)
 }
+console.log("updated v1.0")
 if(document.querySelector("#product_page") != undefined) {
-    console.log("inner")
     let c = setInterval(() => {
         if(fileData != [] && fileData.length > 1) {
             const product = fileData.filter(item => item.id == localStorage.getItem("product-id"))
             insertProductInformationInProductPage(product);
             document.querySelector(".page-location .type").innerHTML = product[0].type;
             document.querySelector(".page-location .name").innerHTML = product[0].name;
-            console.log("inter")
             if (document.querySelector(".state").getAttribute("data-state")) clearInterval(c)
         }
         }, 100);
