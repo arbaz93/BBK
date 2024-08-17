@@ -149,7 +149,7 @@ function sortItemsByPrice(data, option) {
 document.querySelectorAll(".sort .sort-options button").forEach(btn => {
     btn.addEventListener("click", () => {sortItemsByPrice(sortedByTypeData, btn.getAttribute("data-option"))})
 })
-if(location.pathname == "/categories.html") {
+if(document.querySelector("#categories_page") != undefined) {
     let c = setInterval(() => {
         if(fileData != []) clearInterval(c)
             if (localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "lockets" || localStorage.getItem("route") == "rings" || localStorage.getItem("route") == "bags" || localStorage.getItem("route") == "earings" || localStorage.getItem("route") == "bracelets")
@@ -158,7 +158,7 @@ if(location.pathname == "/categories.html") {
 } else {
     appendData(fileData)
 }
-if(location.pathname == "/product.html") {
+if(document.querySelector("#product_page") != undefined) {
     console.log("inner")
     let c = setInterval(() => {
         if(fileData != [] && fileData.length > 1) {
