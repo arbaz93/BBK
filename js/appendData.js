@@ -172,6 +172,8 @@ if(location.pathname == "/product.html") {
 }
 function insertProductInformationInProductPage(data) {
     const item = data[0];
+    description.innerHTML = '1 :' + JSON.stringify(item);
+
     const mainImage = document.querySelector(".product-page > .product > .item-image > .big-image > img");
     const smallImages = document.querySelectorAll(".product-page > .product > .item-image > .small-images > img");
     const name = document.querySelector(".product-page > .product > .item-info > .item-name");
@@ -199,6 +201,7 @@ function insertProductInformationInProductPage(data) {
     buyNowBtn.setAttribute("data-value", item.id);
 
     description.innerHTML = item["description"]
+    description.innerHTML = JSON.stringify(item);
     document.querySelector(".state").setAttribute("data-state", "defined")
 
 }
