@@ -159,6 +159,7 @@ if(location.pathname == "/categories.html") {
     appendData(fileData)
 }
 if(location.pathname == "/product.html") {
+    console.log("inner")
     let c = setInterval(() => {
         if(fileData != [] && fileData.length > 1) {
             const product = fileData.filter(item => item.id == localStorage.getItem("product-id"))
