@@ -5,7 +5,7 @@ const addCartBtn = document.querySelector(".overview-item .add-to-cart");
 // Function to set event globally
 function addGlobalEventListener(type, selector, callback, parent = document) {
     parent.addEventListener(type, e => {
-        console.log(selector)
+        console.log(e.target)
         if(e.target.matches(selector)) {
             callback(e)
         }
@@ -118,7 +118,11 @@ addGlobalEventListener("click", ".product .cart", e => {
     productLinkClicked(e.target);
     productPageRedirect()
 }, document.querySelector(".products-grid"))
-addGlobalEventListener("click", ".product .cart svg", e => {
+addGlobalEventListener("click", ".product .cart > svg", e => {
+    productLinkClicked(e.target);
+    productPageRedirect()
+}, document.querySelector(".products-grid"))
+addGlobalEventListener("click", ".product .cart > svg path", e => {
     productLinkClicked(e.target);
     productPageRedirect()
 }, document.querySelector(".products-grid"))
