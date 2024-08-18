@@ -216,6 +216,9 @@
                 a {
                     width: 100%;
                 }
+                a:nth-child(2) {
+                    text-align: right !important;
+                }
             }
             a {
                 text-decoration: none;
@@ -236,6 +239,9 @@
             }
             a:first-child:hover {
                 background-color: var(--clr-100);
+            }
+            @media (max-width: 428px) {
+                
             }
             
         }

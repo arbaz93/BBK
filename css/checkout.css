@@ -32,7 +32,7 @@ p {
         }
     }
 
-    .shopping-bag>svg {
+    .shopping-bag svg {
         width: 1.5rem;
         stroke: var(--primary-clr);
     }
@@ -284,6 +284,15 @@ p {
             border: 2px solid rgba(0, 0, 0, .2);
             border-radius: 5px;
         }
+        textarea {
+            width: 100%;
+            font-size: .89rem;
+            padding: 1rem .5rem;
+            transition: border 200ms linear;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, .2);
+            border-radius: 5px;
+        }
 
         input[type="submit"] {
             border: none;
@@ -343,6 +352,17 @@ p {
 
 input:not([type="submit"]):focus-within,
 input:not([type="submit"]):focus,
-input:not([type="submit"]):active {
+input:not([type="submit"]):active,
+textarea:focus-within,
+textarea:focus,
+textarea:active {
     border: 2px solid var(--primary-clr) !important;
+}
+.cart-items .empty {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .8);
+}
+.cart-items:has(.item) .empty {
+    display: none;
+    
 }

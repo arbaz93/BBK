@@ -184,6 +184,7 @@ function addToCartInProductPage() {
         })
         document.querySelector(".top-bar .cart-section > .total-items-in-cart").innerHTML = cartItems.length;
     }
+    document.querySelector(".navigation .total-items-in-cart").innerHTML = cartItems.length;
 
 }
 function addToCartAndRedirectToCheckout(btn) {
@@ -223,6 +224,10 @@ function displayCartItemsInShoppingBagPage() {
     let name = document.querySelectorAll("#shoppingbag_page .item .name");
     name.forEach(n => {
         n.addEventListener("click", (e) => { productLinkClicked(n); productPageRedirect() })
+    })
+    let img = document.querySelectorAll("#shoppingbag_page .item .image");
+    img.forEach(ig => {
+        ig.addEventListener("click", (e) => { productLinkClicked(ig); productPageRedirect() })
     })
 }
 
