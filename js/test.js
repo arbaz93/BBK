@@ -196,6 +196,7 @@ function addToCartAndRedirectToCheckout(btn) {
 function displayCartItemsInShoppingBagPage() {
     let cartItems = getSessionItems("cart");
     const bag = document.querySelector(".shopping-bag-items > .bag-items");
+    let totalPrice = 0;
     bag.innerHTML = "";
     cartItems.forEach((item, i) => {
         const temp = `<div class="item" data-product-id="${item.id}"">
@@ -214,9 +215,11 @@ function displayCartItemsInShoppingBagPage() {
                         </svg>
                     </button>
                 </div>`
+                totalPrice += item.price * Number(item["total qty"])
         bag.innerHTML += temp;
 
     })
+    document.querySelector(".shopping-next .total-price span").innerHTML = "Rs." + totalPrice
     let deleteBtns = document.querySelectorAll("#shoppingbag_page .item .delete-btn");
     deleteBtns.forEach(btn => {
         btn.addEventListener("click", (e) => { deleteItemfromSession("cart", e), displayCartItemsInShoppingBagPage() })
