@@ -26,12 +26,16 @@ p {
     .logo {
         display: flex;
         justify-content: center;
-
+        a {
+            max-height: 4rem;
+        }
         img {
             width: 4rem;
         }
     }
-
+    .shopping-bag a {
+        height: 1.5rem;
+    }
     .shopping-bag svg {
         width: 1.5rem;
         stroke: var(--primary-clr);
@@ -359,7 +363,6 @@ textarea:active {
     border: 2px solid var(--primary-clr) !important;
 }
 .cart-items .empty {
-    font-size: 1.5rem;
     color: rgba(0, 0, 0, .8);
 }
 .cart-items:has(.item) .empty {

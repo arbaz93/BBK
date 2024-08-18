@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "D&G 1 Eyes",
+        "name": " 1 Eyes",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -14,7 +14,7 @@
     },
     {
         "id": 1,
-        "name": "D&G new 2 series",
+        "name": " new 2 series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -27,7 +27,7 @@
     },
     {
         "id": 102,
-        "name": "D&G new 3 series",
+        "name": " new 3 series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -40,7 +40,7 @@
     },
     {
         "id": 13,
-        "name": "D&G new 4 series",
+        "name": " new 4 series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -53,7 +53,7 @@
     },
     {
         "id": 40,
-        "name": "D&G new 5 series",
+        "name": " new 5 series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -66,7 +66,7 @@
     },
     {
         "id": 15,
-        "name": "D&G new 6 series",
+        "name": " new 6 series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -79,7 +79,7 @@
     },
     {
         "id": 306,
-        "name": "D&G new bags series",
+        "name": " new bags series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -92,7 +92,7 @@
     },
     {
         "id": 17,
-        "name": "D&G new bags series",
+        "name": " new bags series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -105,7 +105,7 @@
     },
     {
         "id": 80,
-        "name": "D&G new bags series",
+        "name": " new bags series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -118,7 +118,7 @@
     },
     {
         "id": 19,
-        "name": "D&G new rings series",
+        "name": " new rings series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -131,7 +131,7 @@
     },
     {
         "id": 222,
-        "name": "D&G new rings series",
+        "name": " new rings series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -144,7 +144,7 @@
     },
     {
         "id": 15,
-        "name": "D&G new rings series",
+        "name": " new rings series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -157,7 +157,7 @@
     },
     {
         "id": 440,
-        "name": "D&G new lockets series",
+        "name": " new lockets series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -170,7 +170,7 @@
     },
     {
         "id": 155,
-        "name": "D&G new lockets series",
+        "name": " new lockets series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -183,7 +183,7 @@
     },
     {
         "id": 770,
-        "name": "D&G new lockets series",
+        "name": " new lockets series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],
@@ -196,7 +196,7 @@
     },
     {
         "id": 1889,
-        "name": "D&G new lockets series",
+        "name": " new lockets series",
         "main image": "assets/images/product images/article 4.jpg",
         "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
         "sizes": ["small", "medium", "large"],

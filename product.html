@@ -26,45 +26,6 @@
     <div class="preloader">
         <div class="loader"></div>
     </div>
-    <!-- Added to cart confirmation window -->
-
-    <div class="wrap addedtocart-window" data-addedtocart-open="false" hidden>
-        <section class="added-to-cart-confirmation-window">
-            <button class="close-btn" onclick="closeWindow()">
-                <svg class="cross-icon" version="1.1" id="cross-11" xmlns="http://www.w3.org/2000/svg" width="11px"
-                    height="11px" viewBox="0 0 11 11">
-                    <path
-                        d="M2.2,1.19l3.3,3.3L8.8,1.2C8.9314,1.0663,9.1127,0.9938,9.3,1C9.6761,1.0243,9.9757,1.3239,10,1.7&#xA;&#x9;c0.0018,0.1806-0.0705,0.3541-0.2,0.48L6.49,5.5L9.8,8.82C9.9295,8.9459,10.0018,9.1194,10,9.3C9.9757,9.6761,9.6761,9.9757,9.3,10&#xA;&#x9;c-0.1873,0.0062-0.3686-0.0663-0.5-0.2L5.5,6.51L2.21,9.8c-0.1314,0.1337-0.3127,0.2062-0.5,0.2C1.3265,9.98,1.02,9.6735,1,9.29&#xA;&#x9;C0.9982,9.1094,1.0705,8.9359,1.2,8.81L4.51,5.5L1.19,2.18C1.0641,2.0524,0.9955,1.8792,1,1.7C1.0243,1.3239,1.3239,1.0243,1.7,1&#xA;&#x9;C1.8858,0.9912,2.0669,1.06,2.2,1.19z" />
-                </svg>
-            </button>
-
-            <div class="left-side">
-                <p class="added-to-cart-successfully">Added to cart successfully!</p>
-                <div class="product-image">
-                    <img src="assets/images/product images/article 1.jpg" alt="">
-                </div>
-                <p class="product-name">Beige Bag</p>
-                <p class="product-qty uppercase">quantity: <span>5</span></p>
-                <p class="product-total-price uppercase">Total price Rs.<span>999.00</span></p>
-            </div>
-            
-            <div class="right-side">
-                <div class="total-items-and-subtotal">
-                    <p class="total-items">There are <span>5</span> items in your cart</p>
-                    <p class="subtotal uppercase">subtotal: <span>Rs.1999.00</span></p>
-                </div>
-                <div class="btns">
-                    <button class="continue-shoping uppercase" onclick="closeWindow()">Continue shopping</button>
-                    <a href="shoppinbag.html" class="view-shoping-bag uppercase">view shopping bag</a>
-                </div>
-                <a href="checkout.html" class="checkout uppercase">Checkout</a>
-            </div>
-        </section>
-    </div>
-        <!-- ##################################### -->
-        <!-- Added to cart confirmation window END -->
-        <!-- ##################################### -->
-
     <div class="container">
         <section class="top-bar flex">
             <p>Need help? <span class="underline">help@gmail.com</span></p>
@@ -88,14 +49,11 @@
                     <div>
                         <p>Rs.<span class="total-price-cart-icon">0.00</span></p>
                     </div>
-                    <svg class="cart-arrow-down" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
-                        enable-background="new 0 0 58.5 36.3" xml:space="preserve">
+                    <svg class="cart-arrow-down" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3" enable-background="new 0 0 58.5 36.3" xml:space="preserve">
                         <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M55.4,10.8L33.1,33c-1.8,2-5,2-6.9,0L4.1,10.8
                             c-2.1-2-2.6-4.6-0.5-6.6l0.8-0.8c1.8-1.7,3.8-2.1,5.5-0.3c5.4,5.5,10.8,11,16.3,16.5c1.9,1.8,5,1.8,6.9,0c5.5-5.5,11-11,16.5-16.5
-                            c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" id="id_102">
-                        </path>
-                    </svg>
+                            c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" id="id_102"></path>
+                        </svg>
 
                     <div class="cart-items">
                         <div class="items">
@@ -122,13 +80,15 @@
     <nav class="navigation desktop-navigation flex">
         <!-- Logo -->
         <div class="logo">
-            <h1>KY</h1>
+            <a href="index.html">
+                <h1>KY</h1>
+            </a>
         </div>
 
         <!-- Items -->
         <div class="nav-items">
             <div class="nav-item">
-                <a href="categories.html" data-value="newarrivals">New Arrivals</a>
+                <a href="categories.html" data-value="">New Arrivals</a>
             </div>
 
             <div class="nav-item">
@@ -253,7 +213,9 @@
 
         <!-- Logo -->
         <div class="logo">
-            <h1>KY</h1>
+            <a href="index.html">
+                <h1>KY</h1>
+            </a>
         </div>
         <div class="right-float">
             <!-- Search Bar -->
@@ -278,26 +240,137 @@
             <div class="cart-box">
                 <a href="shoppinbag.html">
 
-                    <div class="total-items-in-cart flex">0</div>
-                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
-                        style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                        <g>
-                            <path
-                                d="M27.3,12.1l2.4-2.4C29.9,9.5,30,9.1,30,8.8c-0.1-0.3-0.3-0.6-0.6-0.7l-10-4C19,3.9,18.6,4,18.3,4.3L16,6.6l-2.3-2.3
+                <div class="total-items-in-cart flex">0</div>
+                <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
+                    style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                    <g>
+                        <path
+                            d="M27.3,12.1l2.4-2.4C29.9,9.5,30,9.1,30,8.8c-0.1-0.3-0.3-0.6-0.6-0.7l-10-4C19,3.9,18.6,4,18.3,4.3L16,6.6l-2.3-2.3
                    C13.4,4,13,3.9,12.6,4.1l-10,4C2.3,8.2,2.1,8.5,2,8.8C2,9.1,2.1,9.5,2.3,9.7l2.4,2.4l-2.5,3.3C2,15.6,2,16,2,16.3
                    c0.1,0.3,0.3,0.5,0.6,0.7l10,4c0.1,0,0.2,0.1,0.4,0.1c0.3,0,0.6-0.1,0.8-0.4l2.2-2.9l2.2,2.9c0.2,0.3,0.5,0.4,0.8,0.4
                    c0.1,0,0.3,0,0.4-0.1l10-4c0.3-0.1,0.5-0.4,0.6-0.7c0.1-0.3,0-0.6-0.2-0.9L27.3,12.1z M16,14.9L8.7,12L16,9.1l7.3,2.9L16,14.9z" />
-                            <path
-                                d="M19,23c-0.9,0-1.8-0.4-2.4-1.2L16,21l-0.6,0.8c-0.8,1.1-2.3,1.5-3.5,1L5,20v4c0,0.4,0.2,0.8,0.6,0.9l10,4
+                        <path
+                            d="M19,23c-0.9,0-1.8-0.4-2.4-1.2L16,21l-0.6,0.8c-0.8,1.1-2.3,1.5-3.5,1L5,20v4c0,0.4,0.2,0.8,0.6,0.9l10,4
                    c0.1,0,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l10-4c0.4-0.2,0.6-0.5,0.6-0.9v-4l-6.9,2.8C19.8,22.9,19.4,23,19,23z" />
-                        </g>
-                    </svg>
-                </a>
+                    </g>
+                </svg>
+            </a>
 
             </div>
         </div>
     </nav>
+     <!-- Overview item window -->
+     <div class="wrap overview-window" data-overview-open = "false">
+         <section class="overview-item">
+            <button class="close-btn" onclick="closeWindow()">
+                <svg class="cross-icon" version="1.1" id="cross-11" xmlns="http://www.w3.org/2000/svg" width="11px"
+                    height="11px" viewBox="0 0 11 11">
+                    <path
+                        d="M2.2,1.19l3.3,3.3L8.8,1.2C8.9314,1.0663,9.1127,0.9938,9.3,1C9.6761,1.0243,9.9757,1.3239,10,1.7&#xA;&#x9;c0.0018,0.1806-0.0705,0.3541-0.2,0.48L6.49,5.5L9.8,8.82C9.9295,8.9459,10.0018,9.1194,10,9.3C9.9757,9.6761,9.6761,9.9757,9.3,10&#xA;&#x9;c-0.1873,0.0062-0.3686-0.0663-0.5-0.2L5.5,6.51L2.21,9.8c-0.1314,0.1337-0.3127,0.2062-0.5,0.2C1.3265,9.98,1.02,9.6735,1,9.29&#xA;&#x9;C0.9982,9.1094,1.0705,8.9359,1.2,8.81L4.51,5.5L1.19,2.18C1.0641,2.0524,0.9955,1.8792,1,1.7C1.0243,1.3239,1.3239,1.0243,1.7,1&#xA;&#x9;C1.8858,0.9912,2.0669,1.06,2.2,1.19z" />
+                </svg>
+            </button>
+            <div class="item-image">
+                <div class="big-image">
+                    <div class="arrow left-arrow" onclick="changeImage('left')">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
+                            enable-background="new 0 0 58.5 36.3" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M55.4,10.8L33.1,33c-1.8,2-5,2-6.9,0L4.1,10.8
+                                c-2.1-2-2.6-4.6-0.5-6.6l0.8-0.8c1.8-1.7,3.8-2.1,5.5-0.3c5.4,5.5,10.8,11,16.3,16.5c1.9,1.8,5,1.8,6.9,0c5.5-5.5,11-11,16.5-16.5
+                                c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" id="id_102">
+                            </path>
+                        </svg>
+                    </div>
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                    <div class="arrow right-arrow" onclick="changeImage('right')">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.5 36.3"
+                            enable-background="new 0 0 58.5 36.3" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M55.4,10.8L33.1,33c-1.8,2-5,2-6.9,0L4.1,10.8
+                                c-2.1-2-2.6-4.6-0.5-6.6l0.8-0.8c1.8-1.7,3.8-2.1,5.5-0.3c5.4,5.5,10.8,11,16.3,16.5c1.9,1.8,5,1.8,6.9,0c5.5-5.5,11-11,16.5-16.5
+                                c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" id="id_102">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="small-images">
+                    <img src="assets/images/product images/article 1.jpg" class="active" alt="" data-i="0" onclick="changeImage('direct', this)">
+                    <img src="assets/images/product images/article 1.jpg" alt="" data-i="1" onclick="changeImage('direct', this)">
+                    <img src="assets/images/product images/article 1.jpg" alt="" data-i="2" onclick="changeImage('direct', this)">
+                    <img src="assets/images/product images/article 1.jpg" alt="" data-i="3" onclick="changeImage('direct', this)">
+                </div>
+            </div>
+            <div class="item-info">
+                <h3 class="item-name">Beige Bag </h3>
+                <p class="item-price">Rs.<span class="price">9999.00 </span></p>
+
+                <div class="item-options">
+                    <p>Available Options</p>
+                    <label for="size">Size</label>
+                    <select name="size" id="size">
+                      <!-- Here comes size list -->
+                    </select>
+                    <label for="color">Color</label>
+                    <select name="color" id="color">
+                      <!-- Here comes size list -->
+                    </select>
+                    <div class="qty-and-cart">
+                        <div class="qty">
+                            <p>QTY</p>
+                            <button class="minus">--</button>
+                            <input type="number" name="qty" id="qty" max="20" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <button class="add-to-cart uppercase">Add to cart</button>
+                    </div>
+                </div>
+                <a class="uppercase buy-now" href="#">buy it now</a>
+            </div>
+             </section>
+     </div>
+    <!-- ######################## -->
+    <!-- Overview item window END -->
+    <!-- ######################## -->
+
+    <!-- Added to cart confirmation window -->
+
+    <div class="wrap addedtocart-window" data-addedtocart-open="false">
+        <section class="added-to-cart-confirmation-window">
+            <button class="close-btn" onclick="closeWindow()">
+                <svg class="cross-icon" version="1.1" id="cross-11" xmlns="http://www.w3.org/2000/svg" width="11px"
+                    height="11px" viewBox="0 0 11 11">
+                    <path
+                        d="M2.2,1.19l3.3,3.3L8.8,1.2C8.9314,1.0663,9.1127,0.9938,9.3,1C9.6761,1.0243,9.9757,1.3239,10,1.7&#xA;&#x9;c0.0018,0.1806-0.0705,0.3541-0.2,0.48L6.49,5.5L9.8,8.82C9.9295,8.9459,10.0018,9.1194,10,9.3C9.9757,9.6761,9.6761,9.9757,9.3,10&#xA;&#x9;c-0.1873,0.0062-0.3686-0.0663-0.5-0.2L5.5,6.51L2.21,9.8c-0.1314,0.1337-0.3127,0.2062-0.5,0.2C1.3265,9.98,1.02,9.6735,1,9.29&#xA;&#x9;C0.9982,9.1094,1.0705,8.9359,1.2,8.81L4.51,5.5L1.19,2.18C1.0641,2.0524,0.9955,1.8792,1,1.7C1.0243,1.3239,1.3239,1.0243,1.7,1&#xA;&#x9;C1.8858,0.9912,2.0669,1.06,2.2,1.19z" />
+                </svg>
+            </button>
+
+            <div class="left-side">
+                <p class="added-to-cart-successfully">Added to cart successfully!</p>
+                <div class="product-image">
+                    <img src="assets/images/product images/article 1.jpg" alt="">
+                </div>
+                <p class="product-name">Beige Bag</p>
+                <p class="product-qty uppercase">quantity: <span>5</span></p>
+                <p class="product-total-price uppercase">Total price Rs.<span>999.00</span></p>
+            </div>
+            
+            <div class="right-side">
+                <div class="total-items-and-subtotal">
+                    <p class="total-items">There are <span>5</span> items in your cart</p>
+                    <p class="subtotal uppercase">subtotal: <span>Rs.1999.00</span></p>
+                </div>
+                <div class="btns">
+                    <button class="continue-shoping uppercase" onclick="closeWindow()">Continue shopping</button>
+                    <a href="shoppinbag.html" class="view-shoping-bag uppercase">view shopping bag</a>
+                </div>
+                <a href="checkout.html" class="checkout uppercase">Checkout</a>
+            </div>
+        </section>
+    </div>
+        <!-- ##################################### -->
+        <!-- Added to cart confirmation window END -->
+        <!-- ##################################### -->
 
     <div class="page-location">
         <p>Home <span class="slash">/</span> <span class="type">Product</span> <span class="slash">/</span> <span class="name">Beige Bag</span></p>

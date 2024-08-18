@@ -17,7 +17,7 @@
     <!-- JS -->
     <script src="js/preloader.js" defer></script>
     <script src="js/checkout.js" defer></script>
-
+`   <script src="qrcode/qrcode.min.js"></script>
 </head>
 
 <body id="checkout_page">
@@ -29,7 +29,9 @@
         <section class="topbar">
             <div></div>
             <div class="logo">
-                <img src="assets/images/logo/black-logo.png" alt="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo/black-logo.png" alt="logo">
+                </a>
             </div>
             <div class="shopping-bag">
                 <a href="shoppinbag.html">
@@ -65,7 +67,8 @@
         <div class="order-options">
             <div class="qr-code">
                 <h2 class="heading">ORDER BY SCANNING <span style="color: 	#075E54; font-weight: 600;">WhatsApp</span> QR code</h2>
-                <img src="assets/images/qr/qr-1.png" alt="">
+                <div id="qr-code">
+                </div>
                 <small>if you are unable to scan <a href="https://wa.me/03187199492/?text=HI">CLICK HERE!</a></small>
             </div>
             <div> 
