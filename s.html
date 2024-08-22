@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: 100dvh;
+        }
+        form {
+            input {
+                padding: 1.5rem;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                border-radius: 4px;
+                background-color: transparent;
+                flex-basis: 40%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/search.html" method="GET">
+        <input type="text" name="search" placeholder="Search">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

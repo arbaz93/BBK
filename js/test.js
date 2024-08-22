@@ -247,18 +247,18 @@ if (categoriesPage != undefined || homePage != undefined) {
     addGlobalEventListener("click", ".product .cart", e => {
         productLinkClicked(e.target);
         productPageRedirect()
-    }, document.querySelector(".products-grid"))
+    })
     addGlobalEventListener("click", ".product .cart > svg", e => {
         productLinkClicked(e.target);
         productPageRedirect()
-    }, document.querySelector(".products-grid"))
+    })
     addGlobalEventListener("click", ".product .cart > svg path", e => {
         productLinkClicked(e.target);
         productPageRedirect()
-    }, document.querySelector(".products-grid"))
+    })
     // Setting events on overview button
-    addGlobalEventListener("click", ".magni-glass", e => { displayOverviewWindow(e.target, data) }, document.querySelector(".products-grid"))
-    addGlobalEventListener("click", ".magni-glass > svg", e => { displayOverviewWindow(e.target, data) }, document.querySelector(".products-grid"))
+    addGlobalEventListener("click", ".magni-glass", e => { displayOverviewWindow(e.target, data) })
+    addGlobalEventListener("click", ".magni-glass > svg", e => { displayOverviewWindow(e.target, data) })
 
     buyNowBtnInOverview.addEventListener("click", () => {
         addToCartAndRedirectToCheckout(buyNowBtnInOverview);

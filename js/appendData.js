@@ -1,5 +1,5 @@
 import { retrieveData, setItemToSessionStorage } from "./fetchdata.js";
-export {fileData}
+export {fileData, appendData}
 
 let fileData = [];
 const categoriesPage = document.querySelector("#categories_page");
