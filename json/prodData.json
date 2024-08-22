@@ -1,210 +1,50 @@
 [
-    {
-        "id": 0,
-        "name": " 1 Eyes",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "bags",
-        "price": 660,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 1,
-        "name": " new 2 series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "bags",
-        "price": 400,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 102,
-        "name": " new 3 series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "bags",
-        "price": 42000,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 13,
-        "name": " new 4 series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "rings",
-        "price": 320,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 40,
-        "name": " new 5 series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "bags",
-        "price": 440,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 15,
-        "name": " new 6 series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "bags",
-        "price": 8900,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 306,
-        "name": " new bags series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "bags",
-        "price": 900,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 17,
-        "name": " new bags series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "rings",
-        "price": 999,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 80,
-        "name": " new bags series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "rings",
-        "price": 4000,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 19,
-        "name": " new rings series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "rings",
-        "price": 110,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 222,
-        "name": " new rings series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "rings",
-        "price": 300,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 15,
-        "name": " new rings series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "rings",
-        "price": 1200,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 440,
-        "name": " new lockets series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "lockets",
-        "price": 1000,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 155,
-        "name": " new lockets series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "lockets",
-        "price": 4200,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 770,
-        "name": " new lockets series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "lockets",
-        "price": 600,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    },
-    {
-        "id": 1889,
-        "name": " new lockets series",
-        "main image": "assets/images/product images/article 4.jpg",
-        "sub images": ["assets/images/product images/article 1.jpg", "assets/images/product images/article 2.jpg", "assets/images/product images/article 3.jpg", "assets/images/product images/article 4.jpg"],
-        "sizes": ["small", "medium", "large"],
-        "colors": ["red", "green", "blue"],
-        "type": "lockets",
-        "price": 7000,
-        "description": "loremA nam deserunt ea magnam blanditiis ducimus alias, ipsum quo magni. Architecto reiciendis temporibus est eum autem dignissimos nihil repellat nemo, nulla, earum impedit voluptatibus aliquam, doloribus eveniet qui sed?",
-        "total qty": 10,
-        "status": "new"
-    }
+	{
+		"name": "End and beginning",
+		"main image": "assets\\images\\product images\\article 3.jpg",
+		"sub images": [
+			"assets\\images\\product images\\article 3.jpg",
+			"assets\\images\\product images\\article 3.jpg",
+			"assets\\images\\product images\\article 3.jpg",
+			"assets\\images\\product images\\article 3.jpg"
+		],
+		"sizes": [
+			"18",
+			"20",
+			"22"
+		],
+		"colors": [
+			"Black | White"
+		],
+		"type": "rings",
+		"price": "2000.00",
+		"description": "Kali kali zulfo ke phande na dalo\nhame zinda rehne do ae husn walo",
+		"total qty": "20",
+		"status": "New",
+		"id": 0
+	},
+	{
+		"name": "End and beginning",
+		"main image": "assets\\images\\product images\\article 3.jpg",
+		"sub images": [
+			"assets\\images\\product images\\article 3.jpg",
+			"assets\\images\\product images\\article 3.jpg",
+			"assets\\images\\product images\\article 3.jpg",
+			"assets\\images\\product images\\article 3.jpg"
+		],
+		"sizes": [
+			"18",
+			"20",
+			"22"
+		],
+		"colors": [
+			"Black | White"
+		],
+		"type": "rings",
+		"price": "2000.00",
+		"description": "Kali kali zulfo ke phande na dalo\nhame zinda rehne do ae husn walo",
+		"total qty": "20",
+		"status": "New",
+		"id": 0
+	}
 ]
