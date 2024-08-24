@@ -6,20 +6,19 @@ let currentIndex = 0;
 const changeImage = (btn, elem) => {
     if(btn === "left" && currentIndex > 0) currentIndex--; 
     if(btn === "right" && currentIndex < small_images.length - 1) currentIndex++;
-    let currentImage = document.querySelector(`[data-i='${currentIndex}']`);
-    let imgSrc = currentImage.src;
+    const currentImage = document.querySelector(`.product-page .product [data-i='${currentIndex}']`);
+    console.log(currentIndex)
+    const imgSrc = currentImage.src;
 
     main_image.src = imgSrc;
 
-    
+    console.log(elem)
+    small_images.forEach(img => {img.classList.remove("active")})
     if(btn === "direct") {
         main_image.src = elem.src;
         currentIndex = Number(elem.getAttribute("data-i"))
-        currentImage = document.querySelector(`[data-i='${currentIndex}']`);
-    
+        elem.classList.add("active");    
     }
-    small_images.forEach(img => {img.classList.remove("active")})
-    currentImage.classList.add("active");    
 }
 
 // Scale overview main image on mouse move

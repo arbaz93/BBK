@@ -114,9 +114,10 @@ const interval = setInterval(() => {
         document.querySelector(".heading > h2").innerHTML = "Query is undefined";    
         clearInterval(interval)
     }
-    if (fileData.length > 0 && documents.length === fileData.length) {
+    if (fileData.length > 0 && documents.length === fileData.length && lunr != undefined) {
         idx = lunr(function () {
             this.field('name')
+            this.field('description')
             this.field('type')
             documents.forEach(function (doc) {
                 this.add(doc)

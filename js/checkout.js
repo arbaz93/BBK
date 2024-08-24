@@ -30,9 +30,10 @@ function appendCartItemsInCheckoutPage() {
         orderSummary.innerHTML += `<div class="total">
                     <p>
                         <span>Total : </span>
-                        <span class="price">Rs ${totalPrice}</span>
+                        <span class="price">Rs ${totalPrice}.00</span>
                     </p>
                 </div>`
+        document.querySelector(".order-summary .right-side.total-price").innerHTML = "Rs " + totalPrice + ".00"
     }
 }
 appendCartItemsInCheckoutPage();

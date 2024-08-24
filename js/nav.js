@@ -35,7 +35,7 @@ const CROSS_ICON = document.querySelector(".nav-item > .close-btn");
 const MOBILE_NAV_ITEM_LIST = document.querySelector(".mobile-navigation .nav-items");
 const MOBILE_NAV_OVERLAY = document.querySelector(".mobile-navigation .nav-overlay")
 
-HAM_ICON.addEventListener("click", () => {
+HAM_ICON.addEventListener("click", (e) => {
     MOBILE_NAV_ITEM_LIST.style.animation = "swipeRight 200ms ease-in forwards";
     MOBILE_NAV_OVERLAY.style.animation = "fadeIn 200ms ease-in forwards";
     document.querySelector("body").style.overflow = "hidden";
